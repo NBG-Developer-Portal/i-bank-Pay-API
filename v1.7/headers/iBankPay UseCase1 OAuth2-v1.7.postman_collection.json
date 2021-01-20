@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "f35f69ec-9d2a-42fe-b278-9e9a9cd22e3f",
-		"name": "Wallet instant payment use case (SCT Inst) OAuth2",
+		"_postman_id": "a8a8734c-976d-402a-88a7-bd144d81ee8c",
+		"name": "Wallet instant payment use case (SCT Inst)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -27,7 +27,8 @@
 							{
 								"key": "Client-Id",
 								"type": "text",
-								"value": "{{client_id}}"
+								"value": "{{client-id}}",
+								"disabled": true
 							}
 						],
 						"body": {
@@ -56,12 +57,12 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"type": "text",
-								"value": "text/json"
+								"value": "{{text/json}}"
 							},
 							{
 								"key": "Client-Id",
 								"type": "text",
-								"value": "{{client_id}}"
+								"value": "{{client-id}}"
 							}
 						],
 						"url": {
@@ -86,18 +87,18 @@
 							{
 								"key": "Accept",
 								"type": "text",
-								"value": "text/json"
+								"value": "{{text/json}}"
 							},
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"type": "text",
-								"value": "application/json"
+								"value": "{{application/json}}"
 							},
 							{
 								"key": "Client-Id",
 								"type": "text",
-								"value": "{{client_id}}"
+								"value": "{{client-id}}"
 							}
 						],
 						"body": {
@@ -126,7 +127,7 @@
 							{
 								"key": "Client-Id",
 								"type": "text",
-								"value": "{{client_id}}"
+								"value": "{{client-id}}"
 							}
 						],
 						"body": {
@@ -166,11 +167,36 @@
 							{
 								"key": "Client-Id",
 								"type": "text",
-								"value": "{{client_id}}"
+								"value": "{{client-id}}"
 							},
 							{
 								"key": "sandbox_id",
 								"value": "{{sandbox_id}}",
+								"type": "text"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "username",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}",
+								"type": "text"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}",
 								"type": "text"
 							}
 						],
@@ -192,26 +218,6 @@
 						"description": "Create Sandbox providing a sandbox_id in the body of the request (Replace the value with your own at the enviroment 'iBankPay eCommerce Sandbox' settings).\nNote that Client-Id Header is your ClientId that you have retrieved from the subscription of your newly created application in the Developers Portal Site."
 					},
 					"response": []
-				}
-			],
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
 				}
 			]
 		},
@@ -363,12 +369,37 @@
 							},
 							{
 								"key": "Client-Id",
-								"value": "{{client_id}}",
+								"value": "{{Client-Id}}",
 								"type": "text"
 							},
 							{
 								"key": "sandbox_id",
 								"value": "{{sandbox_id}}",
+								"type": "text"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "username",
+								"value": "{{userId}}",
+								"type": "text"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}",
+								"type": "text"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}",
 								"type": "text"
 							}
 						],
@@ -424,12 +455,37 @@
 							{
 								"key": "Client-Id",
 								"type": "text",
-								"value": "{{client_id}}"
+								"value": "{{Client-Id}}"
 							},
 							{
 								"key": "sandbox_id",
 								"type": "text",
 								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"type": "text",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"type": "text",
+								"value": "{{userId}}"
+							},
+							{
+								"key": "username",
+								"type": "text",
+								"value": "{{userId}}"
+							},
+							{
+								"key": "provider_id",
+								"type": "text",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"type": "text",
+								"value": "{{provider}}"
 							}
 						],
 						"body": {
@@ -483,12 +539,37 @@
 							{
 								"key": "Client-Id",
 								"type": "text",
-								"value": "{{client_id}}"
+								"value": "{{Client-Id}}"
 							},
 							{
 								"key": "sandbox_id",
 								"type": "text",
 								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"type": "text",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"type": "text",
+								"value": "{{userId}}"
+							},
+							{
+								"key": "username",
+								"type": "text",
+								"value": "{{userId}}"
+							},
+							{
+								"key": "provider_id",
+								"type": "text",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"type": "text",
+								"value": "{{provider}}"
 							}
 						],
 						"body": {
@@ -538,12 +619,37 @@
 							{
 								"key": "Client-Id",
 								"type": "text",
-								"value": "{{client_id}}"
+								"value": "{{Client-Id}}"
 							},
 							{
 								"key": "sandbox_id",
 								"type": "text",
 								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"type": "text",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"type": "text",
+								"value": "{{userId}}"
+							},
+							{
+								"key": "username",
+								"type": "text",
+								"value": "{{userId}}"
+							},
+							{
+								"key": "provider_id",
+								"type": "text",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"type": "text",
+								"value": "{{provider}}"
 							}
 						],
 						"body": {
@@ -571,56 +677,6 @@
 			]
 		}
 	],
-	"auth": {
-		"type": "oauth2",
-		"oauth2": [
-			{
-				"key": "scope",
-				"value": "{{scopes}}",
-				"type": "string"
-			},
-			{
-				"key": "clientSecret",
-				"value": "{{client_secret}}",
-				"type": "string"
-			},
-			{
-				"key": "clientId",
-				"value": "{{client_id}}",
-				"type": "string"
-			},
-			{
-				"key": "accessTokenUrl",
-				"value": "{{identity_url}}",
-				"type": "string"
-			},
-			{
-				"key": "tokenName",
-				"value": "wallet",
-				"type": "string"
-			},
-			{
-				"key": "headerPrefix",
-				"value": "Bearer",
-				"type": "string"
-			},
-			{
-				"key": "grant_type",
-				"value": "client_credentials",
-				"type": "string"
-			},
-			{
-				"key": "tokenType",
-				"value": "Bearer",
-				"type": "string"
-			},
-			{
-				"key": "addTokenTo",
-				"value": "header",
-				"type": "string"
-			}
-		]
-	},
 	"event": [
 		{
 			"listen": "prerequest",
